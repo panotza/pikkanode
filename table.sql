@@ -10,6 +10,7 @@ create unique index email_idx on users (email);
 create table pictures (
     id int not null auto_increment,
     caption varchar(255) not null default '',
+    photo varchar(255) not null,
     created_at timestamp not null default now(),
     created_by int not null,
     primary key (id),
