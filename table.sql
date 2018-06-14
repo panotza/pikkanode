@@ -36,3 +36,5 @@ create table likes (
     foreign key (user_id) references users (id),
     foreign key (picture_id) references pictures(id)
 );
+
+insert into users (email, password) values ('root@pikkanode.io', '$2a$12$95SkHmjFpOkhCQt4cQ32PO3rXPcsX62hhty.xddBVV1daSBB1YX9y');
