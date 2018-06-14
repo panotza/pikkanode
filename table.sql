@@ -20,9 +20,11 @@ create index created_at_idx on pictures (created_at desc);
 create table comments (
     id int not null auto_increment,
     text varchar(255) not null default '',
-    created_at timestamp not null default now(),
+    picture_id varchar(255) not null,
     created_by int not null,
+    created_at timestamp not null default now(),
     primary key (id),
+    foreign key (picture_id) references pictures (id),
     foreign key (created_by) references users (id)
 );
 create index created_at_idx on comments (created_at desc);
