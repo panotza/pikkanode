@@ -39,6 +39,19 @@ Returns the error message if signup failed
 }
 ```
 
+### Example error response
+
+* Status: 400
+* Content-Type: application/json; charset=utf-8
+
+Returns the error message if email is invalid
+
+```json
+{
+    "error": "invalid email"
+}
+```
+
 ---
 
 ## POST /auth/signin
