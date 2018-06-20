@@ -142,7 +142,7 @@ Returns pikka list
 
 ```json
 {
-    pikkas: [
+    "pikkas": [
         {
             "id": 1,
             "caption": "หน้าตาอย่างน้อง ควรมีพี่เป็นเจ้าของนะครับ ☺️",
