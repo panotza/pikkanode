@@ -228,7 +228,7 @@ Returns pikka detail
 
 ```json
 {
-    pikka: {
+    "pikka": {
             "id": 2,
             "caption": "Pikkanode is the best",
             "picture": "http://localhost:3000/-/images/fca5f3cf-7f88-47a7-b42b-542d80a37d9d",
