@@ -1,6 +1,6 @@
 # Pikkanode API routes
 
-## POST /auth/signup
+## POST /api/v1/auth/signup
 
 Sign up new user.
 
@@ -67,7 +67,7 @@ Returns the error message if password length is less than 6 charactor
 
 ---
 
-## POST /auth/signin
+## POST /api/v1/auth/signin
 
 Sign in user.
 
@@ -108,7 +108,7 @@ Returns the error message if sign in failed
 
 ---
 
-## POST /auth/signout
+## POST /api/v1/auth/signout
 
 Sign out user.
 
@@ -127,7 +127,7 @@ Returns the empty object.
 
 ---
 
-## GET /pikka
+## GET /api/v1/pikka
 
 list all pikkas
 
@@ -165,7 +165,7 @@ Returns pikka list
 
 ---
 
-## POST /pikka
+## POST /api/v1/pikka
 
 Create new pikka
 
@@ -213,7 +213,7 @@ Returns the error message if user is not signed in
 
 ---
 
-## GET /pikka/:id
+## GET /api/v1/pikka/:id
 
 get pikka detail by given id
 
@@ -252,7 +252,7 @@ Returns pikka detail
 
 ---
 
-## POST /pikka/:id/comment
+## POST /api/v1/pikka/:id/comment
 
 create a new comment on given pikka id
 
@@ -308,7 +308,7 @@ Returns the error message if pikka not exists
 
 ---
 
-## PUT /pikka/:id/like
+## PUT /api/v1/pikka/:id/like
 
 Like a pikka
 
@@ -353,7 +353,7 @@ Returns the error message if pikka not exists
 
 ---
 
-## DELETE /pikka/:id/like
+## DELETE /api/v1/pikka/:id/like
 
 Unlike a pikka
 

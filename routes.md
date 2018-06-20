@@ -2,15 +2,15 @@
 
 ## Auth
 
-- POST /auth/signup
-- POST /auth/signin
-- POST /auth/signout
+- POST /api/v1/auth/signup
+- POST /api/v1/auth/signin
+- POST /api/v1/auth/signout
 
 ## Pikka
 
-- GET /pikka
-- POST /pikka
-- GET /pikka/:id
-- POST /pikka/:id/comment
-- PUT /pikka/:id/like
-- DELETE /pikka/:id/like
+- GET /api/v1/pikka
+- POST /api/v1/pikka
+- GET /api/v1/pikka/:id
+- POST /api/v1/pikka/:id/comment
+- PUT /api/v1/pikka/:id/like
+- DELETE /api/v1/pikka/:id/like
