@@ -52,6 +52,19 @@ Returns the error message if email is invalid
 }
 ```
 
+### Example error response
+
+* Status: 400
+* Content-Type: application/json; charset=utf-8
+
+Returns the error message if password length is less than 6 charactor
+
+```json
+{
+    "error": "password too short"
+}
+```
+
 ---
 
 ## POST /auth/signin
