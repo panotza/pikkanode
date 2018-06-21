@@ -59,7 +59,7 @@ Returns the error message if email is invalid
 * Status: 400
 * Content-Type: application/json; charset=utf-8
 
-Returns the error message if password length is less than 4 charactor
+Returns the error message if password length is less than 6 charactor
 
 ```json
 {
