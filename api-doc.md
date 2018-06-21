@@ -213,6 +213,32 @@ Returns the error message if user is not signed in
 }
 ```
 
+### Example error response
+
+* Status: 400
+* Content-Type: application/json; charset=utf-8
+
+Returns the error message if there is no picture
+
+```json
+{
+    "error": "picture required"
+}
+```
+
+### Example error response
+
+* Status: 400
+* Content-Type: application/json; charset=utf-8
+
+Returns the error message if there is no caption
+
+```json
+{
+    "error": "caption required"
+}
+```
+
 ---
 
 ## GET /api/v1/pikka/:id
@@ -292,6 +318,19 @@ Returns the error message if user is not signed in
 ```json
 {
     "error": "unauthorized"
+}
+```
+
+### Example error response
+
+* Status: 400
+* Content-Type: application/json; charset=utf-8
+
+Returns the error message if there is no text
+
+```json
+{
+    "error": "text required"
 }
 ```
 
