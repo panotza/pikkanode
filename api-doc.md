@@ -144,7 +144,7 @@ Returns pikka list
 
 ```json
 {
-    "pikkas": [
+    "list": [
         {
             "id": 1,
             "caption": "หน้าตาอย่างน้อง ควรมีพี่เป็นเจ้าของนะครับ ☺️",
@@ -195,7 +195,7 @@ Returns created pikka id and create time
 
 ```json
 {
-    "pikkaId": 43,
+    "id": 43,
     "createdAt": "2018-06-19T10:33:12.000Z",
 }
 ```
@@ -256,25 +256,23 @@ Returns pikka detail
 
 ```json
 {
-    "pikka": {
-            "id": 2,
-            "caption": "Pikkanode is the best",
-            "picture": "http://localhost:3000/-/images/fca5f3cf-7f88-47a7-b42b-542d80a37d9d",
-            "createdAt": "2018-06-19T12:32:14.000Z",
-            "likeCount": 10,
-            "comments": [
-                {
-                    "id": 221,
-                    "text": "yeah!",
-                    "createdAt": "2018-06-20T10:32:04.000Z"
-                },
-                {
-                    "id": 229,
-                    "text": "very good",
-                    "createdAt": "2018-06-21T10:33:12.000Z"
-                }
-            ]
+    "id": 2,
+    "caption": "Pikkanode is the best",
+    "picture": "http://localhost:3000/-/images/fca5f3cf-7f88-47a7-b42b-542d80a37d9d",
+    "createdAt": "2018-06-19T12:32:14.000Z",
+    "likeCount": 10,
+    "comments": [
+        {
+            "id": 221,
+            "text": "yeah!",
+            "createdAt": "2018-06-20T10:32:04.000Z"
+        },
+        {
+            "id": 229,
+            "text": "very good",
+            "createdAt": "2018-06-21T10:33:12.000Z"
         }
+    ]
 }
 ```
 
