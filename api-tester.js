@@ -173,7 +173,7 @@ async function testPostPikka () {
   if (result.status !== 200) {
     return log('post pikka failed')
   }
-  if (!result.data.pikkaId) {
+  if (!result.data.id) {
     return log('post pikka should return created pikka id')
   }
   if (!result.data.createdAt) {
@@ -189,18 +189,18 @@ async function testListPikka () {
   if (result.status !== 200) {
     return log('list pikka failed')
   }
-  const { pikkas } = result.data
-  if (!pikkas) {
+  const { list } = result.data
+  if (!list) {
     return log('list pikka should return key pikkas')
   }
-  if (!Array.isArray(pikkas)) {
+  if (!Array.isArray(list)) {
     return log('list pikka should return pikkas as array')
   }
-  if (pikkas.length === 0) {
+  if (list.length === 0) {
     return log('list pikka should return pikkas length > 0')
   }
-  for (let p of pikkas) {
-    const { id, caption, picture, createdAt, commentCount, likeCount } = p
+  for (let pikka of list) {
+    const { id, caption, picture, createdAt, commentCount, likeCount } = pikka
     if (!id) {
       return log('list pikka: pika should has id key')
     }
@@ -234,10 +234,7 @@ async function testGetPikka () {
   if (result.status !== 200) {
     return log('get pikka failed')
   }
-  if (!result.data.pikka) {
-    return log('get pikka should return key pikka')
-  }
-  const { id, caption, picture, createdAt, likeCount, comments } = result.data.pikka
+  const { id, caption, picture, createdAt, likeCount, comments } = result.data
   if (id !== pikkaId) {
     return log('get pikka should return requested pikka correctly')
   }
