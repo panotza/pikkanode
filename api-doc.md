@@ -146,7 +146,7 @@ Returns pikka list
 {
     "list": [
         {
-            "id": 1,
+            "id": "2e33875e-a508-450e-a428-433a6ffd9ed6",
             "caption": "หน้าตาอย่างน้อง ควรมีพี่เป็นเจ้าของนะครับ ☺️",
             "picture": "http://localhost:3000/-/images/d620cb37-797f-48b5-9b3c-865229921ac5",
             "createdAt": "2018-06-14T11:32:24.000Z",
@@ -154,7 +154,7 @@ Returns pikka list
             "likeCount": 5
         },
         {
-            "id": 2,
+            "id": "0dae605f-a212-488b-8d49-c1db5dd0b88e",
             "caption": "Pikkanode is the best",
             "picture": "http://localhost:3000/-/images/fca5f3cf-7f88-47a7-b42b-542d80a37d9d",
             "createdAt": "2018-06-19T12:32:14.000Z",
@@ -256,7 +256,7 @@ Returns pikka detail
 
 ```json
 {
-    "id": 2,
+    "id": "0dae605f-a212-488b-8d49-c1db5dd0b88e",
     "caption": "Pikkanode is the best",
     "picture": "http://localhost:3000/-/images/fca5f3cf-7f88-47a7-b42b-542d80a37d9d",
     "createdAt": "2018-06-19T12:32:14.000Z",
