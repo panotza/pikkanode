@@ -1,5 +1,4 @@
 const logger = document.getElementById('logger')
-const baseUrl = document.getElementById('base-url').value
 let email, password, pikkaId, commentId
 
 function log (s) {
@@ -7,10 +6,11 @@ function log (s) {
 }
 
 function check (name) {
-  document.getElementById(name).setAttribute('checked', true)
+  document.getElementById(name).checked = true
 }
 
 async function fetchApi (url, method, body) {
+  const baseUrl = document.getElementById('base-url').value
   const isObject = Object.prototype.toString.call(body) === '[object Object]'
   const opts = {
     method,
