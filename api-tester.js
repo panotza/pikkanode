@@ -378,7 +378,7 @@ document.getElementById('test-btn').addEventListener('click', async () => {
   if (document.getElementById('picture').files.length === 0) {
     return alert('select photo before being the test')
   }
-  document.querySelectorAll('input[type=checkbox]').forEach(c => c.removeAttribute('checked'))
+  document.querySelectorAll('input[type=checkbox]').forEach(c => { c.checked = false })
   try {
     await generateUser()
     await testSignup()
