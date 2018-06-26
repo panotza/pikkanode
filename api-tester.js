@@ -1,5 +1,5 @@
 const logger = document.getElementById('logger')
-let email, password, pikkaId, commentId
+let email, password, pikkaId
 
 function log (s) {
   logger.innerText = s
@@ -305,6 +305,18 @@ async function testPostComment () {
     throw new Error('comment pikka should return "invalid request"')
   }
 
+  // real post test
+  result = await fetchApi(`/api/v1/pikka/${pikkaId}/comment`, 'POST', body)
+  if (result.status !== 200) {
+    throw new Error('post comment failed')
+  }
+  if (!result.data.commentId) {
+    throw new Error('comment pikka should return comment id')
+  }
+  if (!result.data.createdAt) {
+    throw new Error('comment pikka should return created time')
+  }
+
   check('comment-pikka')
 }
 
@@ -338,6 +350,12 @@ async function testPutLike () {
     throw new Error('like pikka should return "invalid request"')
   }
 
+  // real like test
+  result = await fetchApi(`/api/v1/pikka/${pikkaId}/like`, 'PUT')
+  if (result.status !== 200) {
+    throw new Error('like pikka failed')
+  }
+
   check('like-pikka')
 }
 
@@ -350,10 +368,10 @@ async function testPutUnLike () {
   // authentication test
   result = await fetchApi(`/api/v1/pikka/${pikkaId}/like`, 'DELETE')
   if (result.status !== 401) {
-    throw new Error('like pikka should return 401 when unauthorized')
+    throw new Error('unlike pikka should return 401 when unauthorized')
   }
   if (!result.data.error || result.data.error !== 'unauthorized') {
-    throw new Error('like pikka should return "unauthorized"')
+    throw new Error('unlike pikka should return "unauthorized"')
   }
 
   // signin
@@ -365,10 +383,16 @@ async function testPutUnLike () {
   // invalid id test
   result = await fetchApi(`/api/v1/pikka/999999999999/like`, 'DELETE')
   if (result.status !== 400) {
-    throw new Error('like pikka should return 400 when pikka not exists')
+    throw new Error('unlike pikka should return 400 when pikka not exists')
   }
   if (!result.data.error || result.data.error !== 'invalid request') {
-    throw new Error('like pikka should return "invalid request"')
+    throw new Error('unlike pikka should return "invalid request"')
+  }
+
+  // real unlike test
+  result = await fetchApi(`/api/v1/pikka/${pikkaId}/like`, 'DELETE')
+  if (result.status !== 200) {
+    throw new Error('unlike pikka failed')
   }
 
   check('unlike-pikka')
