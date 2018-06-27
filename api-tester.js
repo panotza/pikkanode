@@ -180,7 +180,7 @@ async function testPostPikka () {
     throw new Error('post pikka should return created time')
   }
 
-  pikkaId = result.data.pikkaId
+  pikkaId = result.data.id
   check('post-pikka')
 }
 
@@ -204,14 +204,23 @@ async function testListPikka () {
     if (!id) {
       throw new Error('list pikka: pika should has id key')
     }
-    if (!caption) {
+    if (caption === undefined) {
       throw new Error('list pikka: pika should has caption key')
     }
-    if (!picture) {
+    if (typeof caption !== 'string') {
+      throw new Error('list pikka: pika should has caption as string')
+    }
+    if (picture === undefined) {
       throw new Error('list pikka: pika should has picture key')
     }
-    if (!createdAt) {
+    if (typeof picture !== 'string') {
+      throw new Error('list pikka: pika should has picture as string')
+    }
+    if (createdAt === undefined) {
       throw new Error('list pikka: pika should has createdAt key')
+    }
+    if (typeof createdAt !== 'string') {
+      throw new Error('list pikka: pika should has creatdAt as string')
     }
     if (commentCount === undefined) {
       throw new Error('list pikka: pika should has commentCount key')
