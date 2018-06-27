@@ -191,13 +191,13 @@ async function testListPikka () {
   }
   const { list } = result.data
   if (!list) {
-    throw new Error('list pikka should return key pikkas')
+    throw new Error('list pikka should return key list')
   }
   if (!Array.isArray(list)) {
-    throw new Error('list pikka should return pikkas as array')
+    throw new Error('list pikka should return list as array')
   }
   if (list.length === 0) {
-    throw new Error('list pikka should return pikkas length > 0')
+    throw new Error('list pikka should return list length > 0')
   }
   for (let pikka of list) {
     const { id, caption, picture, createdAt, commentCount, likeCount } = pikka
