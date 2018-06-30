@@ -1,4 +1,5 @@
 const logger = document.getElementById('logger')
+const inputUrl = document.getElementById('base-url')
 let email, password, pikkaId
 
 function log (s) {
@@ -10,7 +11,7 @@ function check (name) {
 }
 
 async function fetchApi (url, method, body) {
-  const baseUrl = document.getElementById('base-url').value
+  const baseUrl = inputUrl.value
   const isObject = Object.prototype.toString.call(body) === '[object Object]'
   const opts = {
     method,
