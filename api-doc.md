@@ -442,3 +442,35 @@ Returns the error message if pikka not exists
 ```
 
 ---
+
+## GET /api/v1/user/profile
+
+get signed in user profile
+
+===
+
+### Example response
+
+* Status: 200
+* Content-Type: application/json; charset=utf-8
+
+Returns user profile
+
+```json
+{
+    "email": "aaa@tester.com"
+}
+```
+
+### Example error response
+
+* Status: 401
+* Content-Type: application/json; charset=utf-8
+
+Returns the error message if user is not signed in
+
+```json
+{
+    "error": "unauthorized"
+}
+```
