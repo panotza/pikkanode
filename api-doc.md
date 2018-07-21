@@ -151,7 +151,9 @@ Returns pikka list
             "picture": "http://localhost:3000/-/images/d620cb37-797f-48b5-9b3c-865229921ac5",
             "createdAt": "2018-06-14T11:32:24.000Z",
             "commentCount": 12,
-            "likeCount": 5
+            "liked": true,
+            "likeCount": 5,
+            "createdBy: "test@test.com"
         },
         {
             "id": "0dae605f-a212-488b-8d49-c1db5dd0b88e",
@@ -159,7 +161,9 @@ Returns pikka list
             "picture": "http://localhost:3000/-/images/fca5f3cf-7f88-47a7-b42b-542d80a37d9d",
             "createdAt": "2018-06-19T12:32:14.000Z",
             "commentCount": 2,
-            "likeCount": 10
+            "likeCount": 10,
+            "liked": false,
+            "createdBy: "test2@test.com"
         }
     ]
 }
@@ -261,6 +265,8 @@ Returns pikka detail
     "picture": "http://localhost:3000/-/images/fca5f3cf-7f88-47a7-b42b-542d80a37d9d",
     "createdAt": "2018-06-19T12:32:14.000Z",
     "likeCount": 10,
+    "liked": true,
+    "createdBy": "test@test.com",
     "comments": [
         {
             "id": 221,
