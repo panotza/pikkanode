@@ -153,7 +153,7 @@ Returns pikka list
             "commentCount": 12,
             "liked": true,
             "likeCount": 5,
-            "createdBy: "test@test.com"
+            "createdBy": "test@test.com"
         },
         {
             "id": "0dae605f-a212-488b-8d49-c1db5dd0b88e",
